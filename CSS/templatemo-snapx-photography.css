@@ -44,6 +44,15 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+.pMadawee {
+margin: 15px;
+padding: 15px;
+font-family: 'Noto Kufi Arabic' ;
+color: #000;
+font-size: 15px;
+line-height: 28px;
+}
+
 .clearfix:after {
   content: ".";
   display: block;
@@ -80,7 +89,7 @@ header, nav, section, article, aside, footer, hgroup {
 }
 
 html, body {
-  font-family: 'Roboto', sans-serif, 'Noto Kufi Arabic';
+  font-family: 'Noto Kufi Arabic';
   font-weight: 400;
   background-color: #fff;
   font-size: 16px;
@@ -103,11 +112,6 @@ ul {
   margin-bottom: 0px;
 }
 
-p {
-  font-size: 15px;
-  line-height: 28px;
-  color: #7a7a7a;
-}
 
 img {
   width: 100%;
@@ -122,7 +126,7 @@ Global Styles
 html,
 body {
   background: #fff;
-  font-family: 'Roboto', sans-serif, 'Noto Kufi Arabic';
+  font-family: 'Noto Kufi Arabic';
 }
 
 ::selection {
@@ -358,7 +362,7 @@ Header Style
 }
 
 .header-area .main-nav .nav li.has-sub:after {
-  font-family: FontAwesome, 'Noto Kufi Arabic';
+  font-family:  'Noto Kufi Arabic';
   content: "\f107";
   font-size: 12px;
   color: #fff;
