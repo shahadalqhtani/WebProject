@@ -55,6 +55,122 @@ font-size: 15px;
 line-height: 28px;
 }
 
+.h2-AU2 {
+  margin: 0px;
+  padding: 0px;
+  color: #8ED2CF;
+  text-align: right; /* Ensure all text is right-aligned */
+}
+
+
+.name-linkedin{
+  display: flex;
+  justify-content: right;
+}
+
+.name-linkedin a{
+  background-color: #fff;
+  color: #7a6ad8;
+  justify-content: right;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all .3s;
+}
+
+ .name-linkedin  a:hover {
+  background-color: #7a6ad8;
+  color: #fff;
+  justify-content: right;
+}
+
+.fa-linkedin{
+  font-size:25px;
+}
+
+.h2M-AU2{
+  text-align: right;
+}
+
+/* 
+---------------------------------------------
+Team Style
+--------------------------------------------- 
+*/
+
+.team {
+  margin-top: 100px;
+    padding-top: 140px;
+}
+
+.team-member {
+  position: relative;
+}
+
+.team-member:hover img {
+  top: -120px;
+}
+
+.team-member img {
+  max-width: 220px;
+  border-radius: 50%;
+  position: absolute;
+  top: -110px;
+  left: 50%;
+  transform: translateX(-110px);
+  transition: all .3s;
+}
+
+.team-member .main-content {
+  border-radius: 25px;
+  padding: 140px 30px 40px 30px;
+  background-color: #f1f0fe;
+  text-align: center;
+}
+
+.team-member .main-content span.category {
+  color: #7a6ad8;
+  font-size: 15px;
+}
+
+.team-member .main-content h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+.team-member .main-content ul li {
+  display: inline-block;
+  margin: 0px 2px;
+}
+
+.team-member .main-content ul li a {
+  background-color: #fff;
+  color: #7a6ad8;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all .3s;
+}
+
+.team-member .main-content ul li a:hover {
+  background-color: #7a6ad8;
+  color: #fff;
+}
+
+
+
+
+
 /* 
 ---------------------------------------------
 About Style
@@ -85,11 +201,12 @@ About Style
   margin-bottom: 60px;
 }
 
-.h2-AU{
-  margin-top: 0px;
-  margin-bottom: 0px;
-  color: #8ED2CF;
-  text-align: right;
+
+.h2-AU2{
+  padding: 15px;
+  margin: 0px;
+  color: #f1f0fe;
+  text-align: center;
 }
 
 .p-AU{
@@ -98,6 +215,7 @@ About Style
   color: #000;
   text-align: right;
 }
+
 .accordion {
   margin-top: -40px;
   margin-bottom: -40px;
@@ -117,6 +235,8 @@ About Style
   outline: none;
   box-shadow: none;
   border-radius: 40px !important;
+  padding: 15px 25px; /* Consistent padding */
+  justify-content: flex-start; /* Align button content to the start */
 }
 
 .accordion-button:not(.collapsed) {
@@ -126,7 +246,7 @@ About Style
 
 h2.accordion-header button {
   padding: 15px 25px;
-  font-family: 'Poppins';
+  font-family: 'Noto Kufi Arabic';
   font-size: 16px;
   font-weight: 600;
 }
@@ -217,7 +337,7 @@ a {
   text-decoration: none !important;
 }
 
-h2, h3, h4, h5, h6 {
+h3, h4, h5, h6 {
   margin-top: 0px;
   margin-bottom: 0px;
   color: #2a2a2a;
@@ -232,6 +352,7 @@ img {
   width: 100%;
   overflow: hidden;
 }
+
 
 /* 
 ---------------------------------------------
