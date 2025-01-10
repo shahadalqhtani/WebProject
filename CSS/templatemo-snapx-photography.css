@@ -68,30 +68,6 @@ line-height: 28px;
   justify-content: right;
 }
 
-.name-linkedin a{
-  background-color: #fff;
-  color: #7a6ad8;
-  justify-content: right;
-  display: inline-block;
-  text-align: center;
-  line-height: 40px;
-  font-size: 18px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  transition: all .3s;
-}
-
- .name-linkedin  a:hover {
-  background-color: #7a6ad8;
-  color: #fff;
-  justify-content: right;
-}
-
-.fa-linkedin{
-  font-size:25px;
-}
-
 .h2M-AU2{
   text-align: right;
 }
@@ -104,7 +80,7 @@ Team Style
 
 .team {
   margin-top: 100px;
-    padding-top: 140px;
+  padding-top: 140px;
 }
 
 .team-member {
@@ -135,6 +111,7 @@ Team Style
 .team-member .main-content span.category {
   color: #7a6ad8;
   font-size: 15px;
+  padding: 15px;
 }
 
 .team-member .main-content h4 {
@@ -147,6 +124,7 @@ Team Style
 .team-member .main-content ul li {
   display: inline-block;
   margin: 0px 2px;
+  padding: 15px;
 }
 
 .team-member .main-content ul li a {
@@ -160,16 +138,13 @@ Team Style
   height: 40px;
   border-radius: 50%;
   transition: all .3s;
+  
 }
 
 .team-member .main-content ul li a:hover {
   background-color: #7a6ad8;
   color: #fff;
 }
-
-
-
-
 
 /* 
 ---------------------------------------------
@@ -216,46 +191,58 @@ About Style
   text-align: right;
 }
 
+/*البوكس الموف*/
+
 .accordion {
+  text-align: right;
   margin-top: -40px;
-  margin-bottom: -40px;
+  margin-bottom: 80px;
   background-color: #7a6ad8;
   border-radius: 40px;
   padding: 80px 50px 50px 50px;
 }
 
+/*الجواب بوكس*/
 .accordion-item {
   background-color: #fff;
   border-radius: 40px !important;
   margin-bottom: 30px;
   border: none;
+  text-align: right;
 }
 
 .accordion-item .accordion-button {
   outline: none;
   box-shadow: none;
   border-radius: 40px !important;
-  padding: 15px 25px; /* Consistent padding */
-  justify-content: flex-start; /* Align button content to the start */
+  padding: 15px 25px; 
+  justify-content: flex-start;
+  text-align: right;
 }
 
+/*بعد ما يمر الماوس - السؤال*/
 .accordion-button:not(.collapsed) {
-  color: #7a6ad8;
+  color: #8ED2CF;
   background-color: #fff;
+  text-align: right;
 }
+
+/*السؤال*/
 
 h2.accordion-header button {
   padding: 15px 25px;
+  text-align: right;
   font-family: 'Noto Kufi Arabic';
-  font-size: 16px;
+  font-size: 25px;
   font-weight: 600;
 }
 
+
 .accordion-button::after {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   background-image: none;
-  content: '+';
+  content: '∨';
   width: 30px;
   height: 30px;
   display: inline-block;
@@ -269,23 +256,27 @@ h2.accordion-header button {
 .accordion-button:not(.collapsed)::after {
   background-image: none;
   line-height: 32px;
-  content: '-';
+  content: '^';
 }
 
 .accordion-body {
   padding: 0px 25px 30px 25px;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 28px;
   color: #4a4a4a;
+  text-align: right;
+
 }
 
 .about-us .section-heading {
   margin-left: 60px;
   margin-bottom: 0px;
+  
 }
 
 .about-us .section-heading .main-button {
   margin-top: 50px;
+  
 }
 
 .clearfix:after {
@@ -1449,9 +1440,10 @@ section.popular-categories .main-button {
   position: absolute;
   left: 15px;
   top: -60px;
-  padding: 8px 12px;
+  padding: 8px 15px;
   opacity: 0;
   transition: all .3s;
+
 }
 
 .popular-item .thumb span.likes {
