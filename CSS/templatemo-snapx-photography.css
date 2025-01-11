@@ -26,11 +26,10 @@ font & reset css
 --------------------------------------------- 
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
-/* 
----------------------------------------------
-reset
---------------------------------------------- 
-*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
@@ -39,6 +38,245 @@ figure, header, nav, section, article, aside, footer, figcaption {
   padding: 0;
   border: 0;
   outline: 0;
+}
+
+/*Madawee Changes on CSS*/
+h1{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #776AD0;
+}
+.pMadawee {
+margin: 15px;
+padding: 15px;
+font-family: 'Noto Kufi Arabic' ;
+color: #000;
+font-size: 15px;
+line-height: 28px;
+}
+
+.h2-AU2 {
+  margin: 0px;
+  padding: 0px;
+  color: #8ED2CF;
+  text-align: right; /* Ensure all text is right-aligned */
+}
+
+
+.name-linkedin{
+  display: flex;
+  justify-content: right;
+}
+
+.h2M-AU2{
+  text-align: right;
+}
+
+/* 
+---------------------------------------------
+Team Style
+--------------------------------------------- 
+*/
+
+.team {
+  margin-top: 100px;
+  padding-top: 140px;
+}
+
+.team-member {
+  position: relative;
+}
+
+.team-member:hover img {
+  top: -120px;
+}
+
+.team-member img {
+  max-width: 220px;
+  border-radius: 50%;
+  position: absolute;
+  top: -110px;
+  left: 50%;
+  transform: translateX(-110px);
+  transition: all .3s;
+}
+
+.team-member .main-content {
+  border-radius: 25px;
+  padding: 140px 30px 40px 30px;
+  background-color: #f1f0fe;
+  text-align: center;
+}
+
+.team-member .main-content span.category {
+  color: #7a6ad8;
+  font-size: 15px;
+  padding: 15px;
+}
+
+.team-member .main-content h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+.team-member .main-content ul li {
+  display: inline-block;
+  margin: 0px 2px;
+  padding: 15px;
+}
+
+.team-member .main-content ul li a {
+  background-color: #fff;
+  color: #7a6ad8;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all .3s;
+  
+}
+
+.team-member .main-content ul li a:hover {
+  background-color: #7a6ad8;
+  color: #fff;
+}
+
+/* 
+---------------------------------------------
+About Style
+--------------------------------------------- 
+*/
+
+.about-us {
+  position: relative;
+  padding: 0px;
+  margin-top: 130px;
+}
+
+.about-us:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 84%;
+  height: 100%;
+  background-color: #f1f0fe;
+  content: '';
+  border-top-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+}
+
+.section-heading-AU {
+  margin-bottom: 60px;
+}
+
+
+.h2-AU2{
+  padding: 15px;
+  margin: 0px;
+  color: #f1f0fe;
+  text-align: center;
+}
+
+.p-AU{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #000;
+  text-align: right;
+}
+
+/*البوكس الموف*/
+
+.accordion {
+  text-align: right;
+  margin-top: -40px;
+  margin-bottom: 80px;
+  background-color: #7a6ad8;
+  border-radius: 40px;
+  padding: 80px 50px 50px 50px;
+}
+
+/*الجواب بوكس*/
+.accordion-item {
+  background-color: #fff;
+  border-radius: 40px !important;
+  margin-bottom: 30px;
+  border: none;
+  text-align: right;
+}
+
+.accordion-item .accordion-button {
+  outline: none;
+  box-shadow: none;
+  border-radius: 40px !important;
+  padding: 15px 25px; 
+  justify-content: flex-start;
+  text-align: right;
+}
+
+/*بعد ما يمر الماوس - السؤال*/
+.accordion-button:not(.collapsed) {
+  color: #8ED2CF;
+  background-color: #fff;
+  text-align: right;
+}
+
+/*السؤال*/
+
+h2.accordion-header button {
+  padding: 15px 25px;
+  text-align: right;
+  font-family: 'Noto Kufi Arabic';
+  font-size: 25px;
+  font-weight: 600;
+}
+
+
+.accordion-button::after {
+  font-size: 20px;
+  font-weight: 500;
+  background-image: none;
+  content: '∨';
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: #7a6ad8;
+  color: #fff;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: none;
+  line-height: 32px;
+  content: '^';
+}
+
+.accordion-body {
+  padding: 0px 25px 30px 25px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #4a4a4a;
+  text-align: right;
+
+}
+
+.about-us .section-heading {
+  margin-left: 60px;
+  margin-bottom: 0px;
+  
+}
+
+.about-us .section-heading .main-button {
+  margin-top: 50px;
+  
 }
 
 .clearfix:after {
@@ -77,7 +315,7 @@ header, nav, section, article, aside, footer, hgroup {
 }
 
 html, body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Noto Kufi Arabic';
   font-weight: 400;
   background-color: #fff;
   font-size: 16px;
@@ -90,7 +328,7 @@ a {
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h3, h4, h5, h6 {
   margin-top: 0px;
   margin-bottom: 0px;
   color: #2a2a2a;
@@ -100,16 +338,12 @@ ul {
   margin-bottom: 0px;
 }
 
-p {
-  font-size: 15px;
-  line-height: 28px;
-  color: #7a7a7a;
-}
 
 img {
   width: 100%;
   overflow: hidden;
 }
+
 
 /* 
 ---------------------------------------------
@@ -119,7 +353,7 @@ Global Styles
 html,
 body {
   background: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Noto Kufi Arabic';
 }
 
 ::selection {
@@ -355,7 +589,7 @@ Header Style
 }
 
 .header-area .main-nav .nav li.has-sub:after {
-  font-family: FontAwesome;
+  font-family:  'Noto Kufi Arabic';
   content: "\f107";
   font-size: 12px;
   color: #fff;
@@ -1206,9 +1440,10 @@ section.popular-categories .main-button {
   position: absolute;
   left: 15px;
   top: -60px;
-  padding: 8px 12px;
+  padding: 8px 15px;
   opacity: 0;
   transition: all .3s;
+
 }
 
 .popular-item .thumb span.likes {
