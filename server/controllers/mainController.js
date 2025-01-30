@@ -31,3 +31,10 @@ exports.FAQ = async(req, res) =>{
     };
     res.render('FAQ' , locals);
 }
+exports.login = async(req, res) =>{
+    const locals = {
+        title: ' حيّك - تسجيل الدخول',
+        description: ' ! يا هلا فيك بموقع حيّنا ',
+    };
+    res.render('login' , locals);
+}

@@ -8,6 +8,7 @@ const mainController = require('../controllers/mainController');
 router.get('/', mainController.homepage)
 router.get('/about', mainController.about)
 router.get('/FAQ', mainController.FAQ)
+router.get('/login', mainController.login)
 
 
 

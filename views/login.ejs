@@ -1,0 +1,28 @@
+<div class="signup-container">
+    <div class="signup">
+      <div class="signup-connect">
+        <h1 style="font-size: 50px; text-align: right;"> !حياك الله في حيك  </h1>
+        <p style="font-size: 30px; color: aliceblue; text-align: right;">دخل معلوماتك الشخصية وابدأ مشوارك معنا</p>
+        <!-- <a href="#" class="signup-btn signup-btn-social signup-btn-facebook"><i class="fa fa-facebook"></i> Sign in with Facebook</a>
+        <a href="#" class="signup-btn signup-btn-social signup-btn-twitter"><i class="fa fa-twitter"></i> Sign in with Twitter</a>
+        <a href="#" class="signup-btn signup-btn-social signup-btn-google"><i class="fa fa-google"></i> Sign in with Google</a>
+        <a href="#" class="signup-btn signup-btn-social signup-btn-linkedin"><i class="fa fa-linkedin"></i> Sign in with Linkedin</a> -->
+      </div>
+      <div class="signup-classic">
+     
+        <form class="signup-form" action="/signup" method="POST">
+          <fieldset class="signup-fieldset signup-username">
+            <input type="text" name="username" style="text-align: right;" placeholder="اسم المستخدم" value="<%= typeof username !== 'undefined' ? username : '' %>" />
+          </fieldset>
+          <fieldset class="signup-fieldset signup-email">
+            <input type="email" name="email" style="text-align: right;" placeholder="الايميل" value="<%= typeof email !== 'undefined' ? email : '' %>" />
+          </fieldset>
+          <fieldset class="signup-fieldset signup-password">
+            <input type="password" name="password" style="text-align: right;" placeholder="الرقم السري" />
+          </fieldset>
+          <button type="submit" class="signup-btn">تسجيل الدخول</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
