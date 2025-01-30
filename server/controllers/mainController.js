@@ -31,10 +31,6 @@ exports.FAQ = async(req, res) =>{
     };
     res.render('FAQ' , locals);
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> e91db50c6b49a06569876c4b140cca03055935e2
 exports.login = async(req, res) =>{
     const locals = {
         title: ' حيّك - تسجيل الدخول',
@@ -42,7 +38,3 @@ exports.login = async(req, res) =>{
     };
     res.render('login' , locals);
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> e91db50c6b49a06569876c4b140cca03055935e2
