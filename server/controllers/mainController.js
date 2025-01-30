@@ -7,7 +7,7 @@ exports.homepage = async(req, res) =>{
         title: 'حيّك',
         description: ' ! يا هلا فيك بموقع حيّنا ',
     };
-    res.render('index' , locals);
+    res.render('/index' , locals);
 }
 
 /**
@@ -18,7 +18,7 @@ exports.about = async(req, res) =>{
         title: ' حيّك - من نحن',
         description: ' ! يا هلا فيك بموقع حيّنا ',
     };
-    res.render('about' , locals);
+    res.render('/about' , locals);
 }
 
 /**
@@ -29,6 +29,6 @@ exports.FAQ = async(req, res) =>{
         title: ' حيّك - الأسئلة الشائعة',
         description: ' ! يا هلا فيك بموقع حيّنا ',
     };
-    res.render('FAQ' , locals);
+    res.render('/FAQ' , locals);
 }
 

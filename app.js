@@ -1,5 +1,4 @@
-require('dotenv').config;
-
+require('dotenv').config();
 const express = require('express');
 /// help  create diffrent layouts for our website 
 const expressLayouts = require('express-ejs-layouts');
