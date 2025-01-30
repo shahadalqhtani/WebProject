@@ -31,4 +31,3 @@ exports.FAQ = async(req, res) =>{
     };
     res.render('FAQ' , locals);
 }
-

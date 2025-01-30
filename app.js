@@ -24,6 +24,7 @@ app.set('view engine', 'ejs');
 app.use('/' , require('./server/routes/index'))
 //app.use('/' , require('./server/routes/newpage'))   // هنا نحط الصفحة اللي اليوزر يدخل عليهاا ويشوف المفضلة (دقيقة 58 )
 
+
 //Handle 404 
 app.get('*', function(req,res) {
     res.status(404).render('404');
