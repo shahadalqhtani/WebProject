@@ -44,7 +44,8 @@ router.get("/auth/google",
 router.get("/google/callback",
   passport.authenticate("google", {
     failureRedirect: "/login-failure",
-    successRedirect: "/saveditems",
+    successRedirect: "/",   
+    // هنا هذا اللي يخليه يروح للصفحه الغلط
   })
 );
 

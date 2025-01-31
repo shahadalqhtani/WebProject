@@ -27,13 +27,20 @@
                         </li>
                         
                     </ul>
-                    <!-- تسجيل الدخول-->
-
                     <div class="border-button">
-                        <a href="/login" class="sign-in-up">
-                            <i class="fa fa-user"></i> تسجيل الدخول
-                        </a>
+                        <% if (isLoggedIn) { %>
+                            <!-- إذا كان المستخدم مسجل دخول -->
+                            <a href="/logout" class="logout">
+                                <i class="fa fa-sign-out"></i> تسجيل الخروج
+                            </a>
+                        <% } else { %>
+                            <!-- إذا لم يكن المستخدم مسجل دخول -->
+                            <a href="/login" class="sign-in-up">
+                                <i class="fa fa-user"></i> تسجيل الدخول
+                            </a>
+                        <% } %>
                     </div>
+                    
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>

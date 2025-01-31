@@ -29,6 +29,13 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use((req, res, next) => {
+  res.locals.user = req.user; // التأكد من تمرير الـ user في الجلسة
+  res.locals.isLoggedIn = !!req.user; // إضافة متغير للتحقق من حالة تسجيل الدخول
+  next();
+});
+
+
 // help pass data through pages
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
