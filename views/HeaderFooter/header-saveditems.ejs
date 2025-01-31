@@ -2,35 +2,28 @@
 
 <header class="header-area header-sticky">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
+        <nav class="main-nav">
+            <!-- Logo -->
+            <a href="/" class="logo">
+                <img src="/img/logo img2.png" alt="حيّك" class="logo-img">
+            </a>
 
-                    <!-- ***** Logo Start ***** -->
-                    <a href="/" class="logo">
-                        <img src="" alt="حيّك">
-                    </a>
+        
+    
+    <div class="border-button">
+        <a href="#" class="icon-btn">
+            <i class="fa fa-bookmark"></i>
+        </a>
+        <a href="/logout" class="logout-btn">
+            <i class="fa fa-sign-out"></i> تسجيل الخروج
+        </a>
+    </div>
 
-                    <form class="nav col-12 col-md-auto flex-fill mb-2 justify-content-center mb-md-0" role="search"
-                        method="POST" action="/saveditems/search">
-                        <input type="search" name="searchTerm" class="form-control border-primary" placeholder="البحث"
-                            aria-label="Search">
-                    </form>
-
-                    <div class="border-button">
-                        <a href="#"><i id="save-icon" class="fa fa-bookmark"></i></a>
-
-                        <a href="/logout" class="logout">
-                            <i class="fa fa-sign-out"></i> تسجيل الخروج
-                        </a>
-                        
-                    </div>
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                </nav>
-            </div>
-        </div>
+            <!-- Mobile Menu Trigger -->
+            <button class="menu-trigger" aria-label="Toggle Menu">
+                <span></span>
+            </button>
+        </nav>
     </div>
 </header>
-
+<script src="/js/header.js"></script>

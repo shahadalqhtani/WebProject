@@ -1,26 +1,39 @@
-<div class="container">
-    <footer class="py-5">
+<footer class="footer">
+  <div class="footer-top">
 
-        <div class="d-flex justify-content-center">
-            <div class="col-md-5 mb-3">
-              <form>
-                <h5>Subscribe to our newsletter</h5>
-                <p>Monthly digest of what's new and exciting from us.</p>
-                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                  <label for="newsletter1" class="visually-hidden">Email address</label>
-                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                  <button class="btn btn-primary" type="button">Subscribe</button>
-                </div>
-              </form>
+      <!-- Newsletter Section -->
+      <div class="newsletter-section">
+          <h2 class="newsletter-title">اشترك في نشرتنا الإخبارية</h2>
+          <p class="newsletter-desc">آخر المستجدات والأخبار المثيرة منا شهرياً</p>
+          
+          <form class="newsletter-form" id="newsletter-form">
+              <div class="form-group">
+                  <label for="email">البريد الإلكتروني</label>
+                  <div class="input-group">
+                      <input 
+                          type="email" 
+                          id="email" 
+                          placeholder="أدخل بريدك الإلكتروني"
+                          required
+                      >
+                      <button type="submit" class="subscribe-btn">اشتراك</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="/img/logo img2.png" alt="حيّك" class="logo">
             </div>
-          </div>
-
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+      <!-- Navigation Links -->
+      <nav class="footer-nav">
+          <ul>
+              <li><a href="/">الصفحة الرئيسية</a></li>
+              <li><a href="/shop">الخدمات</a></li>
+              <li><a href="/faq">الأسئلة الشائعة</a></li>
+              <li><a href="/about">من نحن</a></li>
           </ul>
-    </footer>
+      </nav>
   </div>
+</footer>

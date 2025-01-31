@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Swiper Slideshow */
+.swiper-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Shop Information */
+.shop-info {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.google-map-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Average Rating */
+.rating-container {
+  font-size: 18px;
+  color: #ffcc00;
+  margin-top: 10px;
+}
+
+/* Tab Section */
+.tab-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background: #776AD0;
+  color: white;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.tab-button:hover {
+  background: #6759b5;
+}
+
+.tab-button.active {
+  background: #5748A3;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Review Form */
+.review-form {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-form textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  font-size: 14px;
+}
+
+.review-form button {
+  margin-top: 10px;
+  background: #776AD0;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.review-form button:hover {
+  background: #5748A3;
+}
+
+/* Reviews Section */
+#submitted-reviews, #fake-reviews {
+  margin-top: 20px;
+  text-align: left;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  color: black;
+}
+
+.review:last-child {
+  border-bottom: none;
+}
+
+/* Star Rating System */
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.star-rating i {
+  font-size: 24px;
+  color: #ccc;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+/* Fix: Ensure the active state applies properly */
+.star-rating i:hover,
+.star-rating i.active {
+  color: #ffcc00;
+}
+
+/* Fix: Ensure stars reset correctly */
+.star-rating i.reset {
+  color: #ccc;
+}
+
+/* Fake Google Maps Styling */
+.fake-map {
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  margin: 10px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fake-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Save Icon Styling */
+.save-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#save-icon {
+  font-size: 24px;
+  color: #ccc; /* Default color */
+  transition: color 0.3s ease;
+}
+
+#save-text {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Saved State */
+.save-container.saved #save-icon {
+  color: #F2963E !important;
+}
+
+.save-container.saved #save-text {
+  color: #F2963E;
+}
+
+/* Back Button */
+.back-button-container {
+  text-align: right;
+  margin: 15px;
+}
+
+.back-button {
+  background: #776AD0;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background: #5748A3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 720px) {
+  .swiper-container {
+    max-width: 100%;
+  }
+
+  .tab-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-button {
+    width: 80%;
+    margin-bottom: 5px;
+  }
+
+  .review-form textarea {
+    height: 100px;
+  }
+
+  .shop-info {
+    padding: 15px;
+  }
+}

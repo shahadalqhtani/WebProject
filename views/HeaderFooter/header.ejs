@@ -1,32 +1,23 @@
 <!-- ***** Header Area Start ***** -->
-
-<header class="header-area header-sticky">
+<header class="header-area">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-
-                    <!-- ***** Logo Start ***** -->
-                    <a href="/" class="logo">
-                        <img src="" alt="حيّك">
-                    </a>
-
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <!--يوديني للصفحة الرئيسية -->
-                        <li><a href="/" class="active">الصفحة الرئيسية</a></li>
-                        <li><a href="/FAQ"> صفحة لمى</a></li>
-                        <li><a href="/about"> صفحة إضافية </a></li>
-                        
-                        <!-- أكثر من واحد تحت بعض لو فيه أحد يحتاجه ولا نخليه مثل الباقي-->
-                        <li class="has-sub"> <a href="javascript:void(0)">تعرف علينا </a>
-                            <ul class="sub-menu">
-                                <li><a href="/about">من نحن </a></li>
-                                <li><a href="/FAQ"> الأسئلة الشائعة</a></li>
-                            </ul>
-                        </li>
-                        
+        <nav class="main-nav">
+            <!-- Logo -->
+            <a href="/" class="logo">
+                <img src="/img/logo img2.png" alt="حيّك" class="logo">
+            </a>
+            
+            <!-- Main Navigation -->
+            <ul class="nav">
+                <li><a href="/" class="nav-link">الصفحة الرئيسية</a></li>
+                <li><a href="/shop" class="nav-link">الخدمات</a></li>
+                <li class="has-sub">
+                    <button class="dropdown-toggle">تعرف علينا</button>
+                    <ul class="sub-menu">
+                        <li><a href="/about" class="sub-link">من نحن</a></li>
+                        <li><a href="/FAQ" class="sub-link">الأسئلة الشائعة</a></li>
                     </ul>
+<<<<<<< HEAD
                     <div class="border-button">
                         <% if (isLoggedIn) { %>
                             <!-- إذا كان المستخدم مسجل دخول -->
@@ -45,7 +36,35 @@
                         <span>Menu</span>
                     </a>
                 </nav>
+=======
+                </li>
+            </ul>
+
+             <!-- Search Form -->
+             <div class="nav-search-container">
+                <form class="search-form" role="search" method="POST" action="/saveditems/search">
+                    <input 
+                        type="search" 
+                        name="searchTerm" 
+                        class="search-input" 
+                        placeholder="البحث..."
+                        aria-label="Search">
+                </form>
+>>>>>>> 5dc041a52e892d3a0c81663f61f3719add67c123
             </div>
-        </div>
+
+            <!-- Auth Button -->
+            <div class="border-button">
+                <a href="/login" class="sign-in-btn">
+                    <i class="fa fa-user"></i> تسجيل الدخول
+                </a>
+            </div>
+
+            <!-- Mobile Menu Trigger -->
+            <button class="menu-trigger" aria-label="Toggle Menu">
+                <span>menu</span>
+            </button>
+        </nav>
     </div>
 </header>
+<script src="/js/header.js"></script>
