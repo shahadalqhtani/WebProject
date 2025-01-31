@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= locals.title %></title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Shop Page Styles -->
+  <link rel="stylesheet" href="/CSS/shop-style.css">
+
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- ***** Main Content ***** -->
+  <div class="wrapper">
+    <div id="search-container">
+      <!-- Back Button -->
+      <button onclick="goBack()" class="back-button">
+        <i class="fa fa-arrow-right"></i> العودة
+      </button>
+      <input type="search" id="search-input" placeholder="ابحث على مكان" />
+      <button id="search">ابحث</button>
+    </div>
+    
+    <div id="buttons">
+      <button class="button-value" data-category="All" onclick="toggleFilter(this, 'All')">الكل</button>
+      <% categories.forEach(category => { %>
+        <button class="button-value" data-category="<%= category.key %>" onclick="toggleFilter(this, '<%= category.key %>')">
+          <%= category.name %>
+        </button>
+      <% }); %>
+    </div>
+    
+    <!-- Section to Show Selected Filters -->
+    <div id="selected-filters"></div>
+    
+    <!-- Shop Cards -->
+    <div id="shops">
+      <% shops.forEach(shop => { %>
+        <div class="card" data-category="<%= shop.category %>" onclick="navigateToShop('<%= shop.placeName %>', '<%= shop.category %>', '<%= shop.image %>', '<%= shop.location %>')">
+          <div class="image-container">
+            <img src="<%= shop.image %>" alt="<%= shop.placeName %>">
+          </div>
+          <div class="container">
+            <h5 class="place-name"><%= shop.placeName %></h5>
+            <h6><%= shop.location %></h6>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+    
+    <script>
+      function navigateToShop(name, category, image, location) {
+        window.location.href = `/shop-details?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}&image=${encodeURIComponent(image)}&location=${encodeURIComponent(location)}`;
+      }
+    </script>
+    
+  
+  <!-- Scripts -->
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const filter = urlParams.get("filter");
+
+    function navigateToShop(name, category, image, location) {
+      window.location.href = `/views/shop-details?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}&image=${encodeURIComponent(image)}&location=${encodeURIComponent(location)}`;
+    }
+
+    function setActiveFilter(filterValue) {
+      document.querySelectorAll(".button-value").forEach(button => {
+        if (button.getAttribute("data-category") === filterValue) {
+          button.classList.add("active");
+        } else {
+          button.classList.remove("active");
+        }
+      });
+    }
+
+    window.onload = () => {
+      if (filter) {
+        setActiveFilter(filter);
+      }
+    };
+
+    function goBack() {
+      window.location.href = "/"; // Redirects to home
+    }
+  </script>
+
+  <script src="/JS/jquery.min.js"></script>
+  <script src="/bootstrap/bootstrap.min.js"></script>
+  <script src="/JS/isotope.min.js"></script>
+  <script src="/JS/owl-carousel.js"></script>
+  <script src="/JS/tabs.js"></script>
+  <script src="/JS/popup.js"></script>
+  <script src="/JS/custom.js"></script>
+  <script src="/JS/shop-filter.js"></script>
+
+</body>
+</html>
