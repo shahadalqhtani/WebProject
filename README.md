@@ -4,11 +4,11 @@ It’s designed to easily find the latest information about essential local reso
 including healthcare services, schools, restaurants, beauty salons, and community events. 
 With all this information in one place!
 
-### Technologies Used
- • EJS - For building dynamic views
- • Bootstrap - For styling and responsive design
- • MongoDB - For data storage
- • Node.js + Express.js - For backend server and routing
+## Technologies Used
+- **EJS** - For building dynamic views  
+- **Bootstrap** - For styling and responsive design  
+- **MongoDB** - For data storage  
+- **Node.js + Express.js** - For backend server and routing
 
 #### Goal
 At "حيّك," our goal is to keep residents informed and connected to their community.
