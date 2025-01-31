@@ -11,9 +11,7 @@
       <div class="signup-classic">
      
         <form class="signup-form" action="/signup" method="POST">
-          <fieldset class="signup-fieldset signup-username">
-            <input type="text" name="username" style="text-align: right;" placeholder="اسم المستخدم" value="<%= typeof username !== 'undefined' ? username : '' %>" />
-          </fieldset>
+          
           <fieldset class="signup-fieldset signup-email">
             <input type="email" name="email" style="text-align: right;" placeholder="الايميل" value="<%= typeof email !== 'undefined' ? email : '' %>" />
           </fieldset>
@@ -21,6 +19,7 @@
             <input type="password" name="password" style="text-align: right;" placeholder="الرقم السري" />
           </fieldset>
           <button type="submit" class="signup-btn">تسجيل الدخول</button>
+          <a href="#" class="signup-btn signup-btn-social signup-btn-google"><i class="fa fa-google"></i>تسجيل الدخول بقوقل</a>
         </form>
       </div>
     </div>
