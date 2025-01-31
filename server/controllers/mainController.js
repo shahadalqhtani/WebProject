@@ -38,3 +38,10 @@ exports.login = async(req, res) =>{
     };
     res.render('login' , locals);
 }
+exports.moreevents = async(req, res) =>{
+    const locals = {
+        title: ' حيّك - تسجيل الدخول',
+        description: ' ! يا هلا فيك بموقع حيّنا ',
+    };
+    res.render('moreevents' , locals);
+}

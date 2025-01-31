@@ -42,6 +42,7 @@ https://templatemo.com/tm-587-tiya-golf-club
   --font-weight-bold:             700;
 }
 
+
 body {
   background-color: var(--white-color);
   font-family: var(--body-font-family); 
@@ -812,7 +813,8 @@ strong {
   background-color: var(--primary-color);
   border-radius: var(--border-radius-medium);
   text-align: center;
-  padding: 20px 30px;
+  padding: 155px 30px;
+  
 }
 
 .custom-block-date {
@@ -1286,4 +1288,5 @@ strong {
     padding: 4px 12px;
   }
 }
+
 
