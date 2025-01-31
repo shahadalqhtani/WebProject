@@ -31,7 +31,6 @@ exports.FAQ = async(req, res) =>{
     };
     res.render('FAQ' , locals);
 }
-
 exports.login = async(req, res) =>{
     const locals = {
         title: ' حيّك - تسجيل الدخول',
@@ -39,4 +38,3 @@ exports.login = async(req, res) =>{
     };
     res.render('login' , locals);
 }
-
