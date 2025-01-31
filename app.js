@@ -31,7 +31,7 @@ app.use(passport.session());
 
 app.use((req, res, next) => {
   res.locals.user = req.user; // التأكد من تمرير الـ user في الجلسة
-  res.locals.isLoggedIn = !!req.user; // إضافة متغير للتحقق من حالة تسجيل الدخول
+  res.locals.isLoggedIn = !!req.user; //  متغير للتحقق من حالة تسجيل الدخول
   next();
 });
 
