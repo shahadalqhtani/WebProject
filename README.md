@@ -4,7 +4,13 @@ It’s designed to easily find the latest information about essential local reso
 including healthcare services, schools, restaurants, beauty salons, and community events. 
 With all this information in one place!
 
-### Goal
+### Technologies Used
+ • EJS - For building dynamic views
+ • Bootstrap - For styling and responsive design
+ • MongoDB - For data storage
+ • Node.js + Express.js - For backend server and routing
+
+#### Goal
 At "حيّك," our goal is to keep residents informed and connected to their community.
 We aim to make it easy for you to find important local resources and discover events happening around you.
 By bringing everything together in one place, we hope to create a stronger sense of belonging and engagement within the neighborhood.
@@ -14,3 +20,4 @@ Madawee Alabdulkreem
 Wajd alomar
 Lama Alturki
 Shahad Alqahtani 
+
