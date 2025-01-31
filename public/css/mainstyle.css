@@ -2934,6 +2934,59 @@ section.contact-us .info-item a:hover {
   color: #776AD0;
 }
 
+/* 
+---------------------------------------------
+Lama's 404 page
+--------------------------------------------- 
+*/
+.custom-container {
+  background-size: cover;
+  background-position: center;
+  position: relative; 
+  min-height: 100vh; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column;
+  padding: 40px;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 1; 
+  width: 680px; 
+  height: auto;  
+}
+
+.custom-container .home-title {
+  color: white;
+  font-weight: bold;
+  margin-right: 400px;
+  margin-bottom: 100px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  white-space: nowrap; 
+  font-size: 3rem; 
+  text-align: center; 
+
+}
+
+/* Style for the button */
+.custom-container .btn {
+  background-color: #6447c3;
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 300px; 
+}
+
+.custom-container .btn:hover {
+  background-color: #F2963E;
+}
 
 /* 
 ---------------------------------------------
@@ -2945,6 +2998,11 @@ body {
   overflow-x: hidden;
 }
 
+@media (max-width: 768px) {
+  .custom-container {
+    background-size: contain; /* Adjust for smaller screens */
+  }
+}
 @media (max-width: 767px) {
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     display: none;
