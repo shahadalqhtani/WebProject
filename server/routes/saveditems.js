@@ -9,6 +9,6 @@ const saveditemsController = require('../controllers/saveditemsController');
 
 // add isLoggedIn to the get  1;46
 
-router.get('/saveditems', saveditemsController.saveditems)
+router.get('/saveditems', isLoggedIn, saveditemsController.saveditems);
 
 module.exports = router;
