@@ -6,7 +6,7 @@ body {
   padding: 20px;
 }
 
-/* Swiper Slideshow */
+/* Swiper Slideshow Container */
 .swiper-container {
   width: 100%;
   max-width: 600px;
@@ -14,17 +14,27 @@ body {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding-top: 60px;
+}
+
+/* Shop Information Container */
+.shop-info-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 /* Shop Information */
 .shop-info {
   margin-top: 20px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Google Maps Icon */
 .google-map-icon {
   width: 40px;
   height: 40px;
@@ -35,6 +45,7 @@ body {
   font-size: 18px;
   color: #ffcc00;
   margin-top: 10px;
+  text-align: center;
 }
 
 /* Tab Section */
@@ -137,6 +148,7 @@ body {
   justify-content: center;
   gap: 5px;
   margin-top: 10px;
+  direction: rtl;
 }
 
 .star-rating i {
@@ -245,7 +257,11 @@ body {
     height: 100px;
   }
 
-  .shop-info {
+  .shop-info-container {
     padding: 15px;
+  }
+
+  .shop-info {
+    padding: 10px;
   }
 }
