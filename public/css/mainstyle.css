@@ -97,6 +97,11 @@ line-height: 28px;
   text-align: right;
 }
 
+.border-button .save{
+  margin: 15px;
+  padding: 10px;
+}
+
 /* 
 ---------------------------------------------
 Team Style
