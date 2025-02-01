@@ -1,104 +1,143 @@
-<!DOCTYPE html>
-<html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= locals.title %></title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="/bootstrap/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Shop Page Styles -->
-  <link rel="stylesheet" href="/CSS/shop-style.css">
-
-  <!-- FontAwesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    .star-rating .fa-star {
+      font-size: 24px;
+      cursor: pointer;
+      color: #ccc;
+    }
+    .star-rating .fa-star.checked {
+      color: gold;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- ***** Main Content ***** -->
-  <div class="wrapper">
-    <div id="search-container">
-      <!-- Back Button -->
-      <button onclick="goBack()" class="back-button">
-        <i class="fa fa-arrow-right"></i> العودة
-      </button>
-      <input type="search" id="search-input" placeholder="ابحث على مكان" />
-      <button id="search">ابحث</button>
-    </div>
+  <!-- Main Shop Page Container -->
+  <div class="shop-page-container">
     
-    <div id="buttons">
-      <button class="button-value" data-category="All" onclick="toggleFilter(this, 'All')">الكل</button>
-      <% categories.forEach(category => { %>
-        <button class="button-value" data-category="<%= category.key %>" onclick="toggleFilter(this, '<%= category.key %>')">
-          <%= category.name %>
-        </button>
-      <% }); %>
-    </div>
-    
-    <!-- Section to Show Selected Filters -->
-    <div id="selected-filters"></div>
-    
-    <!-- Shop Cards -->
-    <div id="shops">
-      <% shops.forEach(shop => { %>
-        <div class="card" data-category="<%= shop.category %>" onclick="navigateToShop('<%= shop.placeName %>', '<%= shop.category %>', '<%= shop.image %>', '<%= shop.location %>')">
-          <div class="image-container">
-            <img src="<%= shop.image %>" alt="<%= shop.placeName %>">
-          </div>
-          <div class="container">
-            <h5 class="place-name"><%= shop.placeName %></h5>
-            <h6><%= shop.location %></h6>
-          </div>
+    <!-- Slideshow Container -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="<%= shopDetails.image %>" alt="<%= shopDetails.name %>">
         </div>
-      <% }); %>
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
-    
-    <script>
-      function navigateToShop(name, category, image, location) {
-        window.location.href = `/shop-details?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}&image=${encodeURIComponent(image)}&location=${encodeURIComponent(location)}`;
-      }
-    </script>
-    
-  
-  <!-- Scripts -->
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const filter = urlParams.get("filter");
 
-    function navigateToShop(name, category, image, location) {
-      window.location.href = `/views/shop-details?name=${encodeURIComponent(name)}&category=${encodeURIComponent(category)}&image=${encodeURIComponent(image)}&location=${encodeURIComponent(location)}`;
+    <!-- Shop Information Container -->
+    <div class="shop-info-container">
+      <div class="shop-info">
+        <h1><%= shopDetails.name %></h1>
+        <p><strong>التصنيف:</strong> <%= shopDetails.category %></p>
+        <p><strong>الموقع:</strong> <%= shopDetails.location %></p>
+        
+        <div class="rating-container">
+          <p>⭐ متوسط التقييم: <span id="average-rating"><%= shopDetails.averageRating %></span> / 5</p>
+        </div>
+      </div>
+
+      <!-- Tab Section -->
+      <div class="tab-container">
+        <button class="tab-button" onclick="openTab('reviews')">التقييمات</button>
+        <button class="tab-button" onclick="openTab('location')">الموقع</button>
+      </div>
+
+      <!-- Reviews Tab -->
+      <div id="reviews" class="tab-content">
+        <div class="review-form">
+          <h2>أضف تقييمك</h2>
+          <textarea id="review-text" placeholder="اكتب تعليقك هنا..."></textarea>
+
+          <div class="star-rating" id="star-rating">
+            <i class="fa fa-star" data-value="1"></i>
+            <i class="fa fa-star" data-value="2"></i>
+            <i class="fa fa-star" data-value="3"></i>
+            <i class="fa fa-star" data-value="4"></i>
+            <i class="fa fa-star" data-value="5"></i>
+          </div>
+          <br>
+          <button onclick="submitReview()">إرسال التقييم</button>
+        </div>
+
+        <h3>التقييمات</h3>
+        <ul id="submitted-reviews">
+          <% if (shopDetails.reviews.length > 0) { %>
+            <% shopDetails.reviews.forEach(review => { %>
+              <li><strong><%= review.name %></strong> - ⭐ <%= review.rating %> <br> "<%= review.text %>"</li>
+            <% }); %>
+          <% } else { %>
+            <li>لا توجد تقييمات حتى الآن.</li>
+          <% } %>
+        </ul>
+      </div>
+
+      <!-- Location Tab -->
+      <div id="location" class="tab-content">
+        <h2>الموقع على الخريطة</h2>
+        <div class="fake-map">
+          <a id="google-maps-link" href="https://www.google.com/maps/search/<%= encodeURIComponent(shopDetails.location) %>" target="_blank">
+            <img src="/img/Shops/GoogleMapIcon.png" alt="Google Maps" class="google-map-icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Files -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/JS/shop-details.js" defer></script>
+
+  <script>
+    function goBack() {
+      window.history.back();
     }
 
-    function setActiveFilter(filterValue) {
-      document.querySelectorAll(".button-value").forEach(button => {
-        if (button.getAttribute("data-category") === filterValue) {
-          button.classList.add("active");
-        } else {
-          button.classList.remove("active");
+    function openTab(tabName) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
+      document.getElementById(tabName).style.display = 'block';
+    }
+    
+    // Handle Star Ratings
+    let selectedRating = 0;
+    document.querySelectorAll("#star-rating .fa-star").forEach(star => {
+      star.addEventListener("click", function () {
+        selectedRating = this.getAttribute("data-value");
+        document.querySelectorAll("#star-rating .fa-star").forEach(s => s.classList.remove("checked"));
+        for (let i = 0; i < selectedRating; i++) {
+          document.querySelectorAll("#star-rating .fa-star")[i].classList.add("checked");
         }
       });
-    }
+    });
 
-    window.onload = () => {
-      if (filter) {
-        setActiveFilter(filter);
+    // Submit Review
+    function submitReview() {
+      let reviewText = document.getElementById("review-text").value;
+
+      if (!reviewText.trim()) {
+        alert("يرجى إدخال تعليق!");
+        return;
       }
-    };
+      if (selectedRating === 0) {
+        alert("يرجى اختيار عدد النجوم!");
+        return;
+      }
 
-    function goBack() {
-      window.location.href = "/"; // Redirects to home
+      let newReview = `<li><strong>مستخدم جديد</strong> - ⭐ ${selectedRating} <br> "${reviewText}"</li>`;
+      document.getElementById("submitted-reviews").innerHTML += newReview;
+      document.getElementById("review-text").value = "";
+      document.querySelectorAll("#star-rating .fa-star").forEach(s => s.classList.remove("checked"));
+      selectedRating = 0;
     }
+
+    // Initialize Swiper
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
   </script>
-
-  <script src="/JS/jquery.min.js"></script>
-  <script src="/bootstrap/bootstrap.min.js"></script>
-  <script src="/JS/isotope.min.js"></script>
-  <script src="/JS/owl-carousel.js"></script>
-  <script src="/JS/tabs.js"></script>
-  <script src="/JS/popup.js"></script>
-  <script src="/JS/custom.js"></script>
-  <script src="/JS/shop-filter.js"></script>
-
 </body>
-</html>
