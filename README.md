@@ -19,7 +19,9 @@ By bringing everything together in one place, we hope to create a stronger sense
 
 ![Flowchart](https://github.com/user-attachments/assets/2fcf3b8b-52ae-4de3-8bd1-733a909ed7bb)
 
-
+## Pages 
+Our website consists of a home page, events, services, which includes seven main services such as education, health, etc., 
+about us, frequently asked questions, and subscription to the latest updates and news.
 
 ## Future Work
 We hope to add more features to improve the user's experience. Some of these features include:
