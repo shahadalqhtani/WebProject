@@ -15,6 +15,16 @@ At "حيّك," our goal is to keep residents informed and connected to their com
 We aim to make it easy for you to find important local resources and discover events happening around you.
 By bringing everything together in one place, we hope to create a stronger sense of belonging and engagement within the neighborhood.
 
+
+
+## Future Work
+We hope to add more features to improve the user's experience. Some of these features include:
+* In-app chat for fellow neighbors to communicate to each other easily.
+* Adding more neighborhood platforms so the people of Riyadh get to experience "حيّك"!
+* An overrall "star rating" for each neighborhood that should appear for new comers who are considering to settle in the area with commentary reviews about the neighborhood overall.
+* An additional sign-in service for local homeowners who look for services and Shop Owners/Service Servers who will provide that service for them.
+* Allowing Shop Owners/Service Servers admin privileges to add their own shop/service.
+
 ## Resources
 **Canva**
 - We used Canva to sketch and plan the structure of the website, as well as to design visuals like images, banners, and logo.
