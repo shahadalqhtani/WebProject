@@ -94,8 +94,8 @@ exports.shopDetails = async (req, res) => {
       category,
       image,
       location,
-      averageRating: 4.5, // Placeholder for average rating, replace with actual data
-      isSaved: false, // Replace with real saved check
+      averageRating: 4.5,
+      isSaved: false, 
       reviews: [
         { name: "أحمد", rating: 5, text: "مطعم ممتاز!" },
         { name: "فاطمة", rating: 4, text: "طعام جيد ولكن الخدمة تحتاج لتحسين." }
