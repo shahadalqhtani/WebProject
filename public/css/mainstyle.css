@@ -671,6 +671,7 @@ shahad
   margin-left: auto;
 }
 
+
 .sign-in-btn, 
 .logout-btn,
 .icon-btn {
@@ -755,6 +756,7 @@ shahad
 }
 
 /* Responsive Design */
+
 @media (max-width: 768px) {
   .nav {
     display: none;

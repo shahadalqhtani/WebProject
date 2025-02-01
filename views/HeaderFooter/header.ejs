@@ -23,10 +23,12 @@
 
                     <div class="border-button">
                         <% if (isLoggedIn) { %>
+                            
                             <!-- إذا كان المستخدم مسجل دخول -->
                             <a href="/logout" class="logout">
                                 <i class="fa fa-sign-out"></i> تسجيل الخروج
-                            </a>
+                            </a> 
+
                         <% } else { %>
                             <!-- إذا لم يكن المستخدم مسجل دخول -->
                             <a href="/login" class="sign-in-up">
@@ -35,6 +37,7 @@
                         <% } %>
                     </div>
                     
+
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>

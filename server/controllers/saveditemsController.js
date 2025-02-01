@@ -11,7 +11,18 @@ exports.saveditems = async(req, res) =>{
         description: ' ! يا هلا فيك بموقع حيّنا ',
     }
 
+    try {
+        const saved = await Save.find({})
+      
+        
+        
+    } catch (error) {
+        
+    }
+
+
     res.render('saveditems/index' , {
+        userName: req.user.firstName,
         locals,
         layout: '../views/layouts/saveditems'
     });

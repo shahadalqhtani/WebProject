@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
+//Each user saved items 
 const saveditemSchema = new Schema({
     user: {
         type: Schema.ObjectId,
