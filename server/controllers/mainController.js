@@ -50,10 +50,12 @@ exports.moreevents = async(req, res) =>{
 /**
  *  Get Shop Page 
  */
+// controllers/mainController.js
+
 exports.shop = async (req, res) => {
     const locals = {
-      title: "المحلات",
-      description: "اكتشف أفضل الأماكن في منطقتك",
+      title: 'المحلات',
+      description: 'اكتشف أفضل الأماكن في منطقتك',
     };
   
     const categories = [
@@ -67,34 +69,40 @@ exports.shop = async (req, res) => {
     ];
   
     const shops = [
-      { placeName: "مطعم الفيروز", category: "Resturants", location: "شارع الملك سعود", image: "/img/Shops/Resturant.jpeg" },
-      { placeName: "مقهى لافندر", category: "Cafes", location: "شارع النهضة", image: "/img/Shops/Cafe.jpeg" },
-      { placeName: "مدرسة النور الأهلية", category: "Education", location: "شارع الامير سلطان", image: "/img/Shops/Education.jpeg" },
-      { placeName: "صالون لمسة الجمال", category: "Beauty", location: "شارع الزهور", image: "/img/Shops/Beauty.jpeg" },
-      { placeName: "محل العائلة للتسوق", category: "Shops", location: "شارع العليا", image: "/img/Shops/Shop.jpeg" },
-      { placeName: "حديقة الربيع", category: "Activity", location: "شارع الوادي", image: "/img/Shops/Activity-kids.jpeg" },
-      { placeName: "مستشفى الرعاية الطبية", category: "Health", location: "شارع المستشفى", image: "/img/Shops/Hospital.jpeg" }
+     
     ];
   
-    res.render("shop", { locals, categories, shops });
+    // Render shop page with the custom layout "mainShop"
+    res.render("shop", { locals, categories, shops, layout: 'layouts/mainShop' });
   };
   
   
   /**
  *  Get Shop INSIDE BOXES 
  */
-  exports.shopDetails = async (req, res) => {
-    const locals = {
-        title: req.query.name || 'تفاصيل المحل'
-    };
+// controllers/mainController.js
 
+exports.shopDetails = async (req, res) => {
+    const { name, category, image, location } = req.query;
+  
+    if (!name || !category || !image || !location) {
+      return res.status(400).send("Missing required parameters.");
+    }
+  
     const shopDetails = {
-        name: req.query.name,
-        category: req.query.category,
-        image: req.query.image,
-        location: req.query.location
+      name,
+      category,
+      image,
+      location,
+      averageRating: 4.5, // Placeholder for average rating, replace with actual data
+      isSaved: false, // Replace with real saved check
+      reviews: [
+        { name: "أحمد", rating: 5, text: "مطعم ممتاز!" },
+        { name: "فاطمة", rating: 4, text: "طعام جيد ولكن الخدمة تحتاج لتحسين." }
+      ]
     };
-
-    res.render('shop-details', { locals, shopDetails });
-};
+  
+    // Render shop details page with mainShop layout
+    res.render('shop-details', { shopDetails, layout: 'layouts/mainShop' });
+  };
   
