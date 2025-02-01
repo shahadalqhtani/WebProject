@@ -15,6 +15,10 @@ At "حيّك," our goal is to keep residents informed and connected to their com
 We aim to make it easy for you to find important local resources and discover events happening around you.
 By bringing everything together in one place, we hope to create a stronger sense of belonging and engagement within the neighborhood.
 
+## Flowchart
+
+![Flowchart](https://github.com/user-attachments/assets/2fcf3b8b-52ae-4de3-8bd1-733a909ed7bb)
+
 
 
 ## Future Work
